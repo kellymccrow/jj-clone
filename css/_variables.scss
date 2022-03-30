@@ -1,0 +1,23 @@
+$primaryOrange: #ffa900;
+$textDark: #1c1b1b;
+$textLight: #6a6a6a;
+$green: #114c2e;
+$bgLight: #efefef;
+
+@mixin textCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin bgOverlay {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(106, 106, 106, 0.24);
+}

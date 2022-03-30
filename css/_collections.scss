@@ -1,0 +1,88 @@
+.collections-main {
+    padding-top: 70px;
+}
+
+.collections-container {
+    padding: 20px;
+    background-color: $bgLight;
+
+    .collections-heading {
+        @include textCenter;
+        padding: 20px 0;
+        color: $textDark;
+
+        h1 {
+            font-size: 1.4em;
+            letter-spacing: 2px;
+        }
+    }
+
+    .collections-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .collection {
+            flex-basis: 100%;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            margin: 15px 0;
+            position: relative;
+
+            .collection-title {
+                position: absolute;
+                left: 25px;
+                bottom: 105px;
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.4em;
+                letter-spacing: 4px;
+            }
+
+            .collection-button {
+                color: $textDark;
+                position: absolute;
+                bottom: 25px;
+                left: 25px;
+                padding: 18px 30px;
+                font-size: .85em;
+                letter-spacing: 2px;
+        
+                &:hover::before, &:focus::before {
+                    transform: scaleX(0);
+                }
+                &:hover, &:focus{
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 640px) {
+
+    .collections-container {
+        padding: 30px;
+
+        .collections-heading {
+            padding: 60px 0;
+        }
+
+
+        .collections-wrapper {
+            justify-content: space-between;
+
+            .collection {
+                flex-basis: 48%;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .collections-container .collections-wrapper .collection {
+        flex-basis: 32%;
+    }
+}

@@ -1,0 +1,39 @@
+.hero-container {
+    height: 60vh;
+    width: 100%;
+    background-image: url('/imgs/hero-img-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include textCenter;
+
+    &::before {
+        @include bgOverlay;
+    }
+
+    .hero-content {
+        @include textCenter;
+        position: inherit;
+        color: #fff;
+        text-shadow: 0 1.5px rgba(0, 0, 0 , 0.15);
+        line-height: 2.5em;
+        width: 425px;
+
+        .hero-heading {
+            font-size: 1.4em;
+        }
+
+        .hero-link {
+            color: #fff;
+            border-bottom: 1px #fff solid;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero-container {
+        height: 80vh;
+    }
+}
